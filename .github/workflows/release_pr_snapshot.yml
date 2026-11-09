@@ -1,11 +1,12 @@
 name: Release a snapshot artifact for a PR
 
-on:
-  workflow_run:
-    workflows: ['CI']
-    branches-ignore: ['dependabot/**']
-    types: [completed]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_run:
+#     workflows: ['CI']
+#     branches-ignore: ['dependabot/**']
+#     types: [completed]
+# 
 jobs:
   release-snapshot-artifact:
     runs-on: ubuntu-latest

@@ -1,11 +1,12 @@
 name: Add comment with code-coverage to PR
 
-on:
-  workflow_run:
-    workflows: ['CI']
-    branches-ignore: ['dependabot/**']
-    types: [completed]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_run:
+#     workflows: ['CI']
+#     branches-ignore: ['dependabot/**']
+#     types: [completed]
+# 
 jobs:
   add-comment-with-code-coverage:
     runs-on: ubuntu-latest
